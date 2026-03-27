@@ -32,7 +32,7 @@ export function AIAssistant() {
 
     try {
       const isMapQuery = userMessage.toLowerCase().includes('map') || userMessage.toLowerCase().includes('direction') || userMessage.toLowerCase().includes('where') || userMessage.toLowerCase().includes('location');
-      
+
       const tools: any[] = [];
       if (isMapQuery) {
         tools.push({ googleMaps: {} });
@@ -98,7 +98,6 @@ export function AIAssistant() {
             </div>
             <div>
               <h3 className="font-serif font-semibold">{t('ai.title')}</h3>
-              <p className="text-xs text-white/70">{t('ai.poweredBy')}</p>
             </div>
           </div>
           <button
@@ -135,7 +134,7 @@ export function AIAssistant() {
                   msg.text
                 )}
               </div>
-              
+
               {msg.urls && msg.urls.length > 0 && (
                 <div className="mt-2 flex flex-col gap-1 w-full">
                   <span className="text-xs font-semibold text-muted-foreground">{t('ai.sources')}</span>
